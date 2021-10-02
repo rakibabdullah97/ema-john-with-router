@@ -3,7 +3,7 @@ import './Cart.css';
 
 const Cart = (props) => {
     const { cart } = props;
-
+    console.log(props)
     // const totalReducer = (previous, product) => previous + product.price;
     // const total = cart.reduce(totalReducer, 0);
     let totalQuantity = 0;
@@ -28,6 +28,7 @@ const Cart = (props) => {
             <p>Shipping: {shipping}</p>
             <p>tax: {tax.toFixed(2)}</p>
             <p>Grand Total: {grandTotal.toFixed(2)}</p>
+            <p>{props.children}</p>
         </div>
     );
 };
